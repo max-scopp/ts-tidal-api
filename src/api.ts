@@ -26,7 +26,7 @@ function formUrlEncoded(_object?: { [key: string]: any }) {
  * Rewrite of https://github.com/lucaslg26/TidalAPI
  * It was kind of shitty and I needed additional API's.
  */
-export default class TidalManager {
+export class TidalManager {
     session: null | Session = null;
     credentials: Credentials;
 
