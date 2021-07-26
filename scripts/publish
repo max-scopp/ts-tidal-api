@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+const exec = require("child_process").execSync;
+const write = require("fs").writeFileSync;
+const resolvePath = require("path").resolve;
+
+const pkgPath = resolvePath(__dirname, "../package.json");
+const v = exec("git tag --points-at").toString().trim();
+
+if (!v) {
+    console.log("No version number.");
+    process.exit(1);
+}
+
+console.log(`Publishing ${v} ...`);
+
+const pkg = require(pkgPath);
+pkg.version = v;
+write(pkgPath, JSON.stringify(pkg, null, 4));
+exec("npm run build", {
+    stdio: "inherit",
+});

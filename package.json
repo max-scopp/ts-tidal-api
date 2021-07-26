@@ -1,33 +1,34 @@
 {
-  "name": "ts-tidal-api",
-  "version": "1.0.0",
-  "description": "Rewrite of https://github.com/lucaslg26/TidalAPI in Typescript",
-  "main": "lib/index.js",
-  "scripts": {
-    "start": "tsc --watch",
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/max-scopp/ts-tidal-api.git"
-  },
-  "keywords": [
-    "tidal",
-    "api",
-    "client",
-    "typescript"
-  ],
-  "author": "Max Scopp",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/max-scopp/ts-tidal-api/issues"
-  },
-  "homepage": "https://github.com/max-scopp/ts-tidal-api#readme",
-  "dependencies": {
-    "node-fetch": "^2.6.1"
-  },
-  "devDependencies": {
-    "@types/node-fetch": "^2.5.12"
-  }
+    "name": "ts-tidal-api",
+    "version": "1.0.2",
+    "description": "Rewrite of https://github.com/lucaslg26/TidalAPI in Typescript",
+    "main": "lib/index.js",
+    "scripts": {
+        "start": "tsc --watch",
+        "build": "tsc",
+        "prepublishOnly": "scripts/publish",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/max-scopp/ts-tidal-api.git"
+    },
+    "keywords": [
+        "tidal",
+        "api",
+        "client",
+        "typescript"
+    ],
+    "author": "Max Scopp",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/max-scopp/ts-tidal-api/issues"
+    },
+    "homepage": "https://github.com/max-scopp/ts-tidal-api#readme",
+    "dependencies": {
+        "node-fetch": "^2.6.1"
+    },
+    "devDependencies": {
+        "@types/node-fetch": "^2.5.12"
+    }
 }
